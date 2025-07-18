@@ -54,11 +54,22 @@
     ul li {
       margin: 8px 0;
     }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .profile-img {
+        position: static;
+        display: block;
+        margin: 0 auto 1rem auto;
+        width: 120px;
+        height: 120px;
+        border: 3px solid #ccc;
+      }
+    }
   </style>
 </head>
 <body>
-  <img src="profile.jpg" alt="Abhikesh Kumar Singh" width="200" 
-     style="border-radius: 50%; margin-top: -10px; margin-bottom: 0.5rem; float: left; margin-right: 1rem;" />
+  <img src="profile.jpg" alt="Abhikesh Kumar Singh" class="profile-img" />
 
   <h1>Hi, I'm Abhikesh Kumar Singh</h1>
 
@@ -100,14 +111,14 @@
   <p>
     Whether you want expert guidance on messaging platforms, SRE best practices, or production support, feel free to reach out.<br />
     <a href="mailto:abhikesh.singh123@gmail.com" style="color:#0066cc; font-weight:bold;">Email me</a> or connect on 
-    <a href="https://www.linkedin.com/in/abhikesh/" target="_blank" style="color:#0066cc; font-weight:bold;">LinkedIn</a>.
+    <a href="https://www.linkedin.com/in/abhikesh/" target="_blank" rel="noopener noreferrer" style="color:#0066cc; font-weight:bold;">LinkedIn</a>.
   </p>
 
   <h2>🔗 Connect with me</h2>
   <ul>
-    <li><a href="https://www.linkedin.com/in/abhikesh/" target="_blank">LinkedIn</a></li>
+    <li><a href="https://www.linkedin.com/in/abhikesh/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
     <li><a href="mailto:abhikesh.singh123@gmail.com">abhikesh.singh123@gmail.com</a></li>
-    <li><a href="https://github.com/AbhikeshSingh" target="_blank">GitHub</a></li>
+    <li><a href="https://github.com/AbhikeshSingh" target="_blank" rel="noopener noreferrer">GitHub</a></li>
   </ul>
 </body>
 </html>
