@@ -7,35 +7,51 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 700px;
+      max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.6;
+      position: relative;
     }
-    h1, h2 {
+
+    .profile-img {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+    }
+
+    h1 {
       color: #333;
+      margin-top: 0;
     }
+
     a {
       color: #0066cc;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     ul {
       list-style-type: none;
-      padding: 0;
+      padding-left: 0;
     }
+
     ul li {
       margin: 8px 0;
     }
   </style>
 </head>
 <body>
-  <div style="text-align: center;">
-    <img src="profile.jpg" alt="Abhikesh Kumar Singh" width="160" style="border-radius: 50%; margin-bottom: 1rem;" />
-    <h1>Hi, I'm Abhikesh Kumar Singh</h1>
-  </div>
+  <img src="profile.jpg" alt="Abhikesh Kumar Singh" class="profile-img" />
+
+  <h1>Hi, I'm Abhikesh Kumar Singh</h1>
 
   <p>
     I'm a Site Reliability Engineering Manager and Solace PubSub+ SME with 14+ years of experience in building scalable and reliable messaging platforms.
