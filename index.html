@@ -16,8 +16,9 @@
     }
 
     .profile-img {
-      float: right;
-      margin: 0 0 15px 15px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
       width: 90px;
       height: 90px;
       border-radius: 50%;
@@ -26,9 +27,10 @@
     }
 
     h1 {
-      text-align: left;
+      text-align: center;
       color: #333;
       margin-top: 0;
+      margin-bottom: 0.3rem;
     }
 
     h2 {
@@ -61,18 +63,35 @@
       margin: 8px 0;
     }
 
+    /* Link bar below h1 */
+    .link-bar {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #0066cc;
+    }
+
+    .link-bar a {
+      margin: 0 8px;
+      text-decoration: none;
+    }
+
+    .link-bar a:hover {
+      text-decoration: underline;
+    }
+
     /* Mobile responsiveness */
     @media screen and (max-width: 600px) {
+      body {
+        padding: 0 15px;
+      }
       .profile-img {
-        float: none;
+        position: static;
         display: block;
         margin: 0 auto 1rem auto;
         width: 90px;
         height: 90px;
-      }
-
-      body {
-        padding: 0 15px;
+        float: none;
       }
     }
   </style>
@@ -82,6 +101,11 @@
   <img src="profile.jpg" alt="Abhikesh Kumar Singh" class="profile-img" />
 
   <h1>Hi, I'm Abhikesh Kumar Singh</h1>
+  
+  <div class="link-bar">
+    <a href="https://www.linkedin.com/in/abhikesh/" target="_blank" rel="noopener noreferrer">LinkedIn</a>•
+    <a href="https://github.com/AbhikeshSingh" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
 
   <p>
     I’m an IT professional with 14+ years of deep expertise in Site Reliability Engineering (SRE).
@@ -122,8 +146,6 @@
   <ul>
     <li>Phone: +91-8920246956</li>
     <li>Email: <a href="mailto:abhikesh.singh123@gmail.com">abhikesh.singh123@gmail.com</a></li>
-    <li><a href="https://www.linkedin.com/in/abhikesh/" target="_blank">LinkedIn</a></li>
-    <li><a href="https://github.com/AbhikeshSingh" target="_blank">GitHub</a></li>
   </ul>
 
 </body>
