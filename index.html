@@ -1,48 +1,62 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhikesh Kumar Singh – Messaging Platform | SRE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
+    :root {
+      --bg-color: #0d1117;
+      --text-color: #e6edf3;
+      --accent: #58a6ff;
+      --highlight: #1f6feb;
+      --section-title: #c9d1d9;
+      --card-bg: #161b22;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.6;
-      position: relative;
-      color: #222;
     }
 
     .profile-img {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 90px;
-      height: 90px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      border: 2px solid #ccc;
+      border: 2px solid var(--accent);
       object-fit: cover;
+      display: block;
+      margin: 0 auto 1rem auto;
     }
 
-    h1 {
-      color: #333;
-      margin-top: 0;
+    h1, h2 {
+      text-align: center;
+      color: var(--section-title);
     }
 
     h2 {
-      color: #004080;
       margin-top: 2.5rem;
-      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 4px;
+    }
+
+    p, ul, li, a {
+      font-size: 1rem;
     }
 
     a {
-      color: #0066cc;
+      color: var(--accent);
       text-decoration: none;
     }
 
     a:hover {
+      color: var(--highlight);
       text-decoration: underline;
     }
 
@@ -55,42 +69,60 @@
       margin: 8px 0;
     }
 
+    ul li i {
+      margin-right: 8px;
+      color: var(--accent);
+    }
+
     form {
-      margin-top: 1rem;
+      background-color: var(--card-bg);
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+      max-width: 500px;
+      margin: 1rem auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+      color: var(--accent);
     }
 
     input, textarea {
       width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      box-sizing: border-box;
+      padding: 6px;
+      font-size: 0.9rem;
+      background-color: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 4px;
+      color: var(--text-color);
+      margin-bottom: 10px;
     }
 
     input[type="submit"] {
-      background-color: #004080;
+      background-color: var(--highlight);
       color: white;
       border: none;
       cursor: pointer;
+      transition: background 0.3s;
+      padding: 8px 12px;
     }
 
     input[type="submit"]:hover {
-      background-color: #003366;
+      background-color: #388bfd;
     }
 
     @media screen and (max-width: 600px) {
-      .profile-img {
-        position: static;
-        display: block;
-        margin: 0 auto 1rem auto;
-        width: 120px;
-        height: 120px;
-        float: none;
-        border: 2px solid #ccc;
+      body {
+        padding: 0 15px;
       }
     }
   </style>
 </head>
 <body>
+
   <img src="profile.jpg" alt="Abhikesh Kumar Singh" class="profile-img" />
 
   <h1>Hi, I'm Abhikesh Kumar Singh</h1>
@@ -117,27 +149,7 @@
     Let’s connect if you’re looking for proven Solace expertise to make your messaging platforms more reliable and scalable.
   </p>
 
-  <h2>📄 Resume</h2>
-
-  <h3>Manager – Site Reliability Engineering, Standard Chartered Bank</h3>
-  <p><em>Jun 2021 – Present</em></p>
-  <ul>
-    <li>Lead global SRE team managing Solace PubSub+ infrastructure.</li>
-    <li>Ensured 99.99%+ availability of messaging infra handling billions of events.</li>
-    <li>Automation using Terraform & Ansible; reduced manual work by 30%.</li>
-    <li>Defined SLAs, SLOs, and SLIs; improved MTTR by 40%.</li>
-    <li>Led RCA & blameless postmortems; collaborated with vendors and internal teams.</li>
-  </ul>
-
-  <h3>Solace Engineer – Barclays</h3>
-  <p><em>Sep 2018 – Jun 2021</em></p>
-  <ul>
-    <li>Hands-on SME for Solace PubSub+ middleware in production.</li>
-    <li>Developed automation scripts for deployment & monitoring.</li>
-    <li>Collaborated on roadmap & design with architects and developers.</li>
-  </ul>
-
-  <h2>🚧 Now Building <span style="font-size: 1.2em;">🔷</span></h2>
+  <h2>🚧 Now Building 🔷</h2>
   <p>
     Sharing insights and best practices on <strong>Solace PubSub+</strong> messaging platform, Site Reliability Engineering, and production automation.<br />
     Expanding to other messaging tech like Kafka soon!
@@ -146,34 +158,34 @@
   <h2>💼 Interested in Working Together?</h2>
   <p>
     Whether you want expert guidance on messaging platforms, SRE best practices, or production support, feel free to reach out.<br />
-    <a href="mailto:abhikesh.singh123@gmail.com" rel="noopener noreferrer" target="_blank" style="color:#0066cc; font-weight:bold;">Email me</a> or connect on 
-    <a href="https://www.linkedin.com/in/abhikesh/" rel="noopener noreferrer" target="_blank" style="color:#0066cc; font-weight:bold;">LinkedIn</a>.
+    <a href="mailto:abhikesh.singh123@gmail.com">Email me</a> or connect on 
+    <a href="https://www.linkedin.com/in/abhikesh/" target="_blank">LinkedIn</a>.
   </p>
-
-  <h2>📬 Contact Me</h2>
-  <form action="mailto:abhikesh.singh123@gmail.com" method="post" enctype="text/plain">
-    <label for="name">Name:</label><br />
-    <input type="text" id="name" name="name" required /><br /><br />
-
-    <label for="email">Email:</label><br />
-    <input type="email" id="email" name="email" required /><br /><br />
-
-    <label for="phone">Mobile Number:</label><br />
-    <input type="tel" id="phone" name="phone" /><br /><br />
-
-    <label for="message">Message:</label><br />
-    <textarea id="message" name="message" rows="4" required></textarea><br /><br />
-
-    <input type="submit" value="Send Message" />
-  </form>
 
   <h2>🔗 Connect with Me</h2>
   <ul>
-    <li>📞 +91-8920246956</li>
-    <li>📧 <a href="mailto:abhikesh.singh123@gmail.com">abhikesh.singh123@gmail.com</a></li>
-    <li>🔗 <a href="https://www.linkedin.com/in/abhikesh/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
-    <li>🐙 <a href="https://github.com/AbhikeshSingh" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+    <li><i class="fas fa-phone"></i> +91-8920246956</li>
+    <li><i class="fas fa-envelope"></i> <a href="mailto:abhikesh.singh123@gmail.com">abhikesh.singh123@gmail.com</a></li>
+    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/abhikesh/" target="_blank">LinkedIn</a></li>
+    <li><i class="fab fa-github"></i> <a href="https://github.com/AbhikeshSingh" target="_blank">GitHub</a></li>
   </ul>
+
+  <h2>📬 Contact Me</h2>
+  <form action="mailto:abhikesh.singh123@gmail.com" method="post" enctype="text/plain">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Mobile Number:</label>
+    <input type="tel" id="phone" name="phone" value="+91-8920246956" />
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="3" required></textarea>
+
+    <input type="submit" value="Send Message" />
+  </form>
 
 </body>
 </html>
