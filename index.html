@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -55,7 +55,28 @@
       margin: 8px 0;
     }
 
-    /* Mobile responsiveness for profile image */
+    form {
+      margin-top: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #004080;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #003366;
+    }
+
     @media screen and (max-width: 600px) {
       .profile-img {
         position: static;
@@ -96,6 +117,26 @@
     Let’s connect if you’re looking for proven Solace expertise to make your messaging platforms more reliable and scalable.
   </p>
 
+  <h2>📄 Resume</h2>
+
+  <h3>Manager – Site Reliability Engineering, Standard Chartered Bank</h3>
+  <p><em>Jun 2021 – Present</em></p>
+  <ul>
+    <li>Lead global SRE team managing Solace PubSub+ infrastructure.</li>
+    <li>Ensured 99.99%+ availability of messaging infra handling billions of events.</li>
+    <li>Automation using Terraform & Ansible; reduced manual work by 30%.</li>
+    <li>Defined SLAs, SLOs, and SLIs; improved MTTR by 40%.</li>
+    <li>Led RCA & blameless postmortems; collaborated with vendors and internal teams.</li>
+  </ul>
+
+  <h3>Solace Engineer – Barclays</h3>
+  <p><em>Sep 2018 – Jun 2021</em></p>
+  <ul>
+    <li>Hands-on SME for Solace PubSub+ middleware in production.</li>
+    <li>Developed automation scripts for deployment & monitoring.</li>
+    <li>Collaborated on roadmap & design with architects and developers.</li>
+  </ul>
+
   <h2>🚧 Now Building <span style="font-size: 1.2em;">🔷</span></h2>
   <p>
     Sharing insights and best practices on <strong>Solace PubSub+</strong> messaging platform, Site Reliability Engineering, and production automation.<br />
@@ -109,11 +150,30 @@
     <a href="https://www.linkedin.com/in/abhikesh/" rel="noopener noreferrer" target="_blank" style="color:#0066cc; font-weight:bold;">LinkedIn</a>.
   </p>
 
-  <h2>🔗 Connect with me</h2>
+  <h2>📬 Contact Me</h2>
+  <form action="mailto:abhikesh.singh123@gmail.com" method="post" enctype="text/plain">
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" required /><br /><br />
+
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required /><br /><br />
+
+    <label for="phone">Mobile Number:</label><br />
+    <input type="tel" id="phone" name="phone" /><br /><br />
+
+    <label for="message">Message:</label><br />
+    <textarea id="message" name="message" rows="4" required></textarea><br /><br />
+
+    <input type="submit" value="Send Message" />
+  </form>
+
+  <h2>🔗 Connect with Me</h2>
   <ul>
-    <li><a href="https://www.linkedin.com/in/abhikesh/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
-    <li><a href="mailto:abhikesh.singh123@gmail.com">abhikesh.singh123@gmail.com</a></li>
-    <li><a href="https://github.com/AbhikeshSingh" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+    <li>📞 +91-8920246956</li>
+    <li>📧 <a href="mailto:abhikesh.singh123@gmail.com">abhikesh.singh123@gmail.com</a></li>
+    <li>🔗 <a href="https://www.linkedin.com/in/abhikesh/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+    <li>🐙 <a href="https://github.com/AbhikeshSingh" rel="noopener noreferrer" target="_blank">GitHub</a></li>
   </ul>
+
 </body>
 </html>
