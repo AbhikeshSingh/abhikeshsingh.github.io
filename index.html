@@ -13,12 +13,13 @@
       line-height: 1.6;
       color: #222;
       background-color: #fff;
+      position: relative;
     }
 
     .profile-img {
       position: absolute;
       top: 20px;
-      right: 20px;
+      right: 20px; /* keeps it 20px from right edge */
       width: 90px;
       height: 90px;
       border-radius: 50%;
@@ -27,10 +28,25 @@
     }
 
     h1 {
-      text-align: center;
       color: #333;
       margin-top: 0;
-      margin-bottom: 0.3rem;
+      text-align: left;
+      padding-right: 130px; /* to avoid text under image */
+    }
+
+    .links-under-name {
+      margin-top: -10px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      color: #0066cc;
+    }
+    .links-under-name a {
+      margin-right: 15px;
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .links-under-name a:hover {
+      text-decoration: underline;
     }
 
     h2 {
@@ -63,23 +79,6 @@
       margin: 8px 0;
     }
 
-    /* Link bar below h1 */
-    .link-bar {
-      text-align: center;
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
-      color: #0066cc;
-    }
-
-    .link-bar a {
-      margin: 0 8px;
-      text-decoration: none;
-    }
-
-    .link-bar a:hover {
-      text-decoration: underline;
-    }
-
     /* Mobile responsiveness */
     @media screen and (max-width: 600px) {
       body {
@@ -91,7 +90,17 @@
         margin: 0 auto 1rem auto;
         width: 90px;
         height: 90px;
-        float: none;
+        border-radius: 50%;
+        border: 2px solid #ccc;
+        object-fit: cover;
+      }
+      h1 {
+        padding-right: 0;
+        text-align: center;
+      }
+      .links-under-name {
+        text-align: center;
+        margin-bottom: 1.5rem;
       }
     }
   </style>
@@ -101,8 +110,7 @@
   <img src="profile.jpg" alt="Abhikesh Kumar Singh" class="profile-img" />
 
   <h1>Hi, I'm Abhikesh Kumar Singh</h1>
-  
-  <div class="link-bar">
+  <div class="links-under-name">
     <a href="https://www.linkedin.com/in/abhikesh/" target="_blank" rel="noopener noreferrer">LinkedIn</a>•
     <a href="https://github.com/AbhikeshSingh" target="_blank" rel="noopener noreferrer">GitHub</a>
   </div>
@@ -139,14 +147,9 @@
   <p>
     Whether you want expert guidance on messaging platforms, SRE best practices, or production support, feel free to reach out.<br />
     <a href="mailto:abhikesh.singh123@gmail.com">Email me</a> or connect on 
-    <a href="https://www.linkedin.com/in/abhikesh/" target="_blank">LinkedIn</a>.
+    <a href="https://www.linkedin.com/in/abhikesh/" target="_blank">LinkedIn</a>.<br />
+    Phone: +91-8920246956
   </p>
-
-  <h2>🔗 Connect with Me</h2>
-  <ul>
-    <li>Phone: +91-8920246956</li>
-    <li>Email: <a href="mailto:abhikesh.singh123@gmail.com">abhikesh.singh123@gmail.com</a></li>
-  </ul>
 
 </body>
 </html>
