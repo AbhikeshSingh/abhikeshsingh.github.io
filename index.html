@@ -4,45 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhikesh Kumar Singh – Messaging Platform | SRE</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    :root {
-      --bg-color: #0d1117;
-      --text-color: #e6edf3;
-      --accent: #58a6ff;
-      --highlight: #1f6feb;
-      --section-title: #c9d1d9;
-      --card-bg: #161b22;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      font-family: Arial, sans-serif;
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.6;
+      color: #222;
+      background-color: #fff;
     }
 
     .profile-img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 2px solid var(--accent);
-      object-fit: cover;
       display: block;
       margin: 0 auto 1rem auto;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      object-fit: cover;
     }
 
-    h1, h2 {
+    h1 {
       text-align: center;
-      color: var(--section-title);
+      color: #333;
+      margin-top: 0;
     }
 
     h2 {
+      color: #004080;
       margin-top: 2.5rem;
-      border-bottom: 1px solid #30363d;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #ccc;
       padding-bottom: 4px;
     }
 
@@ -51,12 +44,11 @@
     }
 
     a {
-      color: var(--accent);
+      color: #0066cc;
       text-decoration: none;
     }
 
     a:hover {
-      color: var(--highlight);
       text-decoration: underline;
     }
 
@@ -69,16 +61,7 @@
       margin: 8px 0;
     }
 
-    ul li i {
-      margin-right: 8px;
-      color: var(--accent);
-    }
-
     form {
-      background-color: var(--card-bg);
-      padding: 1rem;
-      border-radius: 8px;
-      border: 1px solid #30363d;
       max-width: 500px;
       margin: 1rem auto;
     }
@@ -87,33 +70,32 @@
       display: block;
       margin-bottom: 4px;
       font-size: 0.9rem;
-      color: var(--accent);
+      color: #004080;
     }
 
     input, textarea {
       width: 100%;
       padding: 6px;
       font-size: 0.9rem;
-      background-color: #0d1117;
-      border: 1px solid #30363d;
+      border: 1px solid #ccc;
       border-radius: 4px;
-      color: var(--text-color);
       margin-bottom: 10px;
     }
 
     input[type="submit"] {
-      background-color: var(--highlight);
+      background-color: #004080;
       color: white;
       border: none;
       cursor: pointer;
-      transition: background 0.3s;
       padding: 8px 12px;
+      transition: background 0.3s;
     }
 
     input[type="submit"]:hover {
-      background-color: #388bfd;
+      background-color: #002050;
     }
 
+    /* Mobile responsiveness */
     @media screen and (max-width: 600px) {
       body {
         padding: 0 15px;
@@ -164,10 +146,10 @@
 
   <h2>🔗 Connect with Me</h2>
   <ul>
-    <li><i class="fas fa-phone"></i> +91-8920246956</li>
-    <li><i class="fas fa-envelope"></i> <a href="mailto:abhikesh.singh123@gmail.com">abhikesh.singh123@gmail.com</a></li>
-    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/abhikesh/" target="_blank">LinkedIn</a></li>
-    <li><i class="fab fa-github"></i> <a href="https://github.com/AbhikeshSingh" target="_blank">GitHub</a></li>
+    <li>Phone: +91-8920246956</li>
+    <li>Email: <a href="mailto:abhikesh.singh123@gmail.com">abhikesh.singh123@gmail.com</a></li>
+    <li><a href="https://www.linkedin.com/in/abhikesh/" target="_blank">LinkedIn</a></li>
+    <li><a href="https://github.com/AbhikeshSingh" target="_blank">GitHub</a></li>
   </ul>
 
   <h2>📬 Contact Me</h2>
@@ -179,7 +161,7 @@
     <input type="email" id="email" name="email" required />
 
     <label for="phone">Mobile Number:</label>
-    <input type="tel" id="phone" name="phone" value="+91-8920246956" />
+    <input type="tel" id="phone" name="phone" placeholder="Your mobile number" />
 
     <label for="message">Message:</label>
     <textarea id="message" name="message" rows="3" required></textarea>
