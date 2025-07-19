@@ -16,8 +16,8 @@
     }
 
     .profile-img {
-      display: block;
-      margin: 0 auto 1rem auto;
+      float: right;
+      margin: 0 0 15px 15px;
       width: 90px;
       height: 90px;
       border-radius: 50%;
@@ -26,7 +26,7 @@
     }
 
     h1 {
-      text-align: center;
+      text-align: left;
       color: #333;
       margin-top: 0;
     }
@@ -63,6 +63,14 @@
 
     /* Mobile responsiveness */
     @media screen and (max-width: 600px) {
+      .profile-img {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem auto;
+        width: 90px;
+        height: 90px;
+      }
+
       body {
         padding: 0 15px;
       }
