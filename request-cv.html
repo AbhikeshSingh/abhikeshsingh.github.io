@@ -27,7 +27,6 @@
     <label for="message">Your Message (Minimum 15 characters) *</label>
     <textarea id="message" name="message" required minlength="15"></textarea>
 
-    <!-- Redirect after successful submit -->
     <input type="hidden" name="_redirect" value="https://abhikeshsingh.github.io/thank-you.html" />
 
     <button type="submit">Submit Request</button>
@@ -35,11 +34,30 @@
 
   <script>
     function validateForm() {
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
       const message = document.getElementById("message").value.trim();
-      if (message.length < 15) {
-        alert("Message must be at least 15 characters.");
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        document.getElementById("email").focus();
         return false;
       }
+
+      const phonePattern = /^[0-9+ ]{7,15}$/;
+      if (!phonePattern.test(phone)) {
+        alert("Please enter a valid phone number (7 to 15 digits, spaces or plus allowed).");
+        document.getElementById("phone").focus();
+        return false;
+      }
+
+      if (message.length < 15) {
+        alert("Message must be at least 15 characters.");
+        document.getElementById("message").focus();
+        return false;
+      }
+
       return true;
     }
   </script>
