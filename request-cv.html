@@ -2,88 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Request My CV – Abhikesh Kumar Singh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request CV – Abhikesh Singh</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #f7f7f7;
-      color: #222;
-    }
-    h1 {
-      text-align: center;
-      color: #004080;
-    }
-    form {
-      background: white;
-      padding: 20px;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      margin-top: 20px;
-      background-color: #004080;
-      color: white;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 4px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #002050;
-    }
-    .note {
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 15px;
-    }
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; background: #f9f9f9; }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input, textarea { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+    button { margin-top: 20px; background: #004080; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #002050; }
   </style>
 </head>
 <body>
-
-  <h1>Request My CV</h1>
-  <form action="https://formspree.io/f/xanbqzvd" method="POST" onsubmit="return validateForm()">
-    <label for="name">Full Name *</label>
-    <input type="text" name="name" id="name" required />
+  <h2>Request Access to My CV</h2>
+  <form action="https://usebasin.com/f/5cd345072698" method="POST" onsubmit="return validateForm()">
+    <label for="name">Your Name *</label>
+    <input type="text" id="name" name="name" required />
 
     <label for="email">Email Address *</label>
-    <input type="email" name="email" id="email" required />
+    <input type="email" id="email" name="email" required />
 
-    <label for="mobile">Mobile Number *</label>
-    <input type="tel" name="mobile" id="mobile" required pattern="[0-9+ ]{10,}" />
+    <label for="phone">Mobile Number *</label>
+    <input type="tel" id="phone" name="phone" required pattern="[0-9+ ]{7,15}" title="Enter a valid phone number" />
 
-    <label for="message">Message (Min 15 characters) *</label>
-    <textarea name="message" id="message" rows="4" required></textarea>
+    <label for="message">Your Message (Minimum 15 characters) *</label>
+    <textarea id="message" name="message" required minlength="15"></textarea>
+
+    <!-- Redirect after successful submit -->
+    <input type="hidden" name="_redirect" value="https://abhikeshsingh.github.io/thank-you.html" />
 
     <button type="submit">Submit Request</button>
-    <p class="note">Once your request is approved, I will email you the CV manually.</p>
   </form>
 
   <script>
     function validateForm() {
       const message = document.getElementById("message").value.trim();
       if (message.length < 15) {
-        alert("Please enter a message with at least 15 characters.");
+        alert("Message must be at least 15 characters.");
         return false;
       }
       return true;
     }
   </script>
-
 </body>
 </html>
