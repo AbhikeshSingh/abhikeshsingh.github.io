@@ -126,7 +126,34 @@
   </style>
 </head>
 <body>
+<style>
+  .resume-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
 
+  @media (max-width: 600px) {
+    .resume-button {
+      position: relative;
+      display: block;
+      margin: 10px auto;
+      top: 0;
+      right: 0;
+    }
+  }
+</style>
+
+<button class="resume-button" onclick="window.print()">📄 Download Resume (PDF)</button>
   <img src="profile.jpg" alt="Abhikesh Kumar Singh" class="profile-img" />
 
   <h1>Hi, I'm Abhikesh Kumar Singh</h1>
@@ -201,6 +228,7 @@
   <a href="https://www.linkedin.com/in/abhikesh/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, or visit my 
   <a href="https://abhikeshsingh.github.io/" target="_blank" rel="noopener noreferrer">personal website</a>.
 </p>
+
 
 
 
